@@ -10,7 +10,7 @@ export class ApiService {
   constructor() { }
 
   public findItemsApi(length: number) : Observable<any>{
-    return of(this.generateArray(length)).pipe(delay(2000))
+    return of(this.generateArray(length)).pipe(delay(1500))
         
     
   }
