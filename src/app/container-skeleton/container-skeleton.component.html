@@ -1,0 +1,14 @@
+<div id="infinite-scroll" class="infinite-scroll">
+  <div class="container" id="container" *ngFor="let item of array">
+    <section class="card">
+      <figure id="card-image" class="card-image" [class.loading]="loading">
+        <div class="card-detail">
+          <h3 id="card-title" class="card-title" [class.loading]="loading">{{item?.title}}</h3>
+          <p id="card-description" class="card-description" [class.loading]="loading">{{item?.description}}</p>
+        </div>
+        <img *ngIf="!loading" class="img" [src]="item?.image?.src" [alt]="item?.image?.alt" />
+      </figure>
+    </section>
+  </div>
+  <wm-spinner *ngIf="addMoreLoading"></wm-spinner>
+</div>
